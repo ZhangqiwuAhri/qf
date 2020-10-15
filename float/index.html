@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    *{
+        margin: 0;padding: 0;
+    }
+</style>
+<body>
+<h1>浮动</h1>
+<hr>
+<p>浮动时只考虑前一个浮动元素的位置</p>
+<p>右浮动的第一个元素回到最右边</p>
+<div>
+    <div style="background: red;width: 100px;height: 100px;float: left">
+
+    </div>
+
+    <div style="background: yellow;width: 200px;height:200px;float: left">
+        <p>阿三大苏打阿三大啊啊啊啊啊啊顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶</p>
+    </div>
+
+    <div style="background: green;width: 300px;height:300px;float: left">
+        清除浮动
+    </div>
+</div>
+
+<div style="width: 500px;height: 500px;background: black;clear: both">
+
+</div>
+
+</body>
+</html>
