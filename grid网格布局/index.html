@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 500px;height:500px;border: 1px solid #ccc;
+            display: grid;
+            grid-template-rows:100px auto 25%;
+            grid-template-columns: 100px 100px 200px 100px;
+            
+        }
+
+        .box1{
+            margin-top: 100px;
+            width: 300px;height:300px;border: 1px solid #ccc;
+            display: grid;
+            grid-template-rows:repeat(3,1fr);
+            grid-template-columns:repeat(3,1fr);
+            
+        }
+        .box2{
+            margin-top: 100px;
+            width: 300px;height:300px;border: 1px solid #ccc;
+            display: grid;
+            grid-template-rows:repeat(3,1fr);
+            grid-template-columns:repeat(3,1fr);
+            grid-template-areas: 
+            "a1 a1 a1"
+            "a2 a2 a3"
+            "a2 a2 a3"
+            ;
+            grid-column-gap: 20px;
+            grid-row-gap: 20px;;
+        }
+        .box2 div:nth-child(1){grid-area: a1;background: red;}
+        .box2 div:nth-child(2){grid-area: a2;background: rosybrown;}
+        .box2 div:nth-child(3){grid-area: a3;background: saddlebrown;}
+
+
+        .box3{
+            margin-top: 100px;
+            width: 300px;height:300px;border: 1px solid #ccc;
+            display: grid;
+            grid-template-rows:repeat(3,1fr);
+            grid-template-columns:repeat(3,1fr);
+            justify-items: center;
+            align-items: center;
+          
+        }
+        .box3 div{
+            background: red;
+            border: 1px solid #ccc;
+        
+        }
+
+
+        
+        .box4{
+            margin-top: 100px;
+            width: 300px;height:300px;border: 1px solid #ccc;
+            display: grid;
+            grid-template-rows:repeat(3,1fr);
+            grid-template-columns:repeat(3,1fr);
+           
+          
+        }
+        .box4 div{
+            background: red;
+            border: 1px solid #ccc;
+            grid-row-start: 2;
+            grid-row-end: 2;
+            grid-column-start: 2;
+            grid-column-end: 2;
+        
+        }
+        
+        
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+
+    <div class="box1">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+      
+    </div>
+
+    
+    <div class="box2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        
+      
+    </div>
+
+
+    
+    <div class="box3">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+      
+    </div>
+
+    <div class="box4">
+        <div>1</div>
+    </div>
+
+</body>
+</html>
