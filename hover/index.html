@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .test:hover{
+       color: red; 
+    }
+  
+    .test:active{
+        color: springgreen;
+    }
+    .test::after{
+        content: 'after';
+    }
+    .test::before{
+        content: 'before';
+        color: springgreen;
+    }
+ 
+    input[type=checkbox]:checked{
+        width: 100px;
+        height: 100px;
+    }
+    
+    input[type=checkbox]:disabled{
+        width: 30px;
+        height: 30px;
+    }
+    input[type=text]:focus{
+       background: red;
+    }
+    .ula>li:nth-of-type(3){
+        background: red;
+    }
+
+    .ulb>li:nth-of-type(2n){
+        background: red;
+    }
+   
+    
+
+</style>
+<body>
+    
+    <a href="" class="test">伪类</a>
+    <br>
+
+    checked
+    <input type="checkbox" name="sex" checked>男
+    <input type="checkbox" name="sex">女
+    <input type="checkbox" name="sex" disabled>人妖
+
+
+    <br>
+    focus
+    <input type="text">
+    <br>
+    <ul class="ula">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+
+
+    <ul class="ulb">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+</body>
+</html>

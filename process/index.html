@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .process{
+        width: 200px;height: 20px;border: 1px solid greenyellow;
+        background-image: linear-gradient(to right top, greenyellow 25%, green 25%,green 50%, greenyellow 50%,greenyellow 75%,green 75%);background-size: 20px;
+        animation: move 5s 0s linear;
+    }
+    @keyframes move {
+      0%{background-position: 0,0;}
+      100%{background-position: 300px,0;}
+    }
+</style>
+<body>
+    <div class="process"></div>
+</body>
+</html>

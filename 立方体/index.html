@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        width: 300px;
+        height: 300px;
+        border: red 1px solid;
+    }
+    .box:hover > ul{
+        transform: rotateY(360deg);
+      }
+    *{
+        padding: 0;
+        margin: 0;
+    }
+   ul{
+       list-style: none;
+       position: relative;
+       transform-style: preserve-3d;
+       transition: 3s;
+       perspective: 0px;
+     
+       transform-origin: center center 50px;
+       width: 300px;
+      height: 300px;
+
+    
+      
+   }
+    ul>li{
+        width: 100px;
+      height: 100px;
+      text-align: center;line-height: 100px;
+       position:absolute; 
+     
+    }
+    ul>li:nth-of-type(1){
+        background: red;
+        left: 0px;
+        top: 100px;
+        transform:rotateY(90deg);
+        transform-origin: right;
+    }
+    ul>li:nth-of-type(2){
+        background: yellow;
+        left: 100px;
+        top: 100px;
+    }
+    ul>li:nth-of-type(3){
+        background: violet;
+        left: 200px;
+        top: 100px;
+        transform:rotateY(-90deg);
+        transform-origin: left;
+    }
+    ul>li:nth-of-type(4){
+        background: green;
+        left: 100px;
+        top: 0px;
+        transform:rotateX(-90deg);
+        transform-origin: bottom;
+    }
+    ul>li:nth-of-type(5){
+        background: blue;
+        left: 100px;
+        top: 100px;
+    }
+    ul>li:nth-of-type(6){
+        background: orange;
+        left: 100px;
+        top: 200px;
+        transform:rotateX(90deg);
+        transform-origin: top;
+    }
+ 
+  
+</style>
+<body>
+    <div class="box"> <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul></div>
+   
+</body>
+</html>

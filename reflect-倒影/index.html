@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        width: 200px;
+       -webkit-box-reflect: below 20px linear-gradient(rgba(255,255,255,0) 30%,rgba(255,255,255,.1));
+    }
+    img{
+        filter: blur(1px);
+    }
+    .box2{
+        margin-top: 200px;
+        width: 200px;
+        height: 200px;
+        border: 1px solid #ccc;
+    }
+
+    .box3{
+        width: calc(100% - 100px);
+        height: calc(100% - 100px);
+        background: red;
+    }
+</style>
+<body>
+    <div class="box">
+       <img src="../images/user.png" alt="">
+    </div>
+
+    <div class="box2">
+        <div class="box3"></div>
+    </div>
+    
+</body>
+</html>

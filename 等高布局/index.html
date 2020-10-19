@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{padding: 0;margin: 0;}
+    .box1{width: 500px;border: 1px solid #ccc;}
+    .box2{float: left;width: 100px;height: 100px;background-color: red;}
+    .box3{float: right;width: 100px;height: 100px;background-color: bisque;}
+    .box1:after{
+      display: table;
+      clear: both;
+      content: '';
+    }
+
+    #box1{width: 500px;border: 1px solid #ccc;overflow: hidden;}
+    #box2{float:left;width: 100px;background-color: red;margin-bottom: -1000px;padding-bottom: 1000px;}
+    #box3{float:left;width: 100px;background-color: bisque;margin-bottom: -1000px;padding-bottom: 1000px;}
+</style>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+    <div id="box1">
+        <div id="box2">
+            <p>1111</p>
+        </div>
+        <div id="box3">
+            <p>1111</p>
+            <p>1111</p>
+            <p>1111</p>
+            <p>1111</p>
+            <p>1111</p>
+            <p>1111</p>
+            <p>1111</p>
+            <p>1111</p>
+            <p>1111</p>
+            <p>1111</p>
+            <p>1111</p>
+            <p>1111</p>
+            <p>1111</p>
+            <p>1111</p>
+            <p>1111</p>
+            <p>1111</p>
+            <p>1111</p>
+            <p>1111</p>
+            <p>1111</p>
+            <p>1111</p>
+            <p>1111</p>
+            <p>1111</p>
+            <p>1111</p>
+            <p>1111</p>
+            <p>1111</p>
+        </div>
+    </div>
+    
+</body>
+</html>

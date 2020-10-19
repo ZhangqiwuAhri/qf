@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box1{width: 1100px;height: 60px;margin: 0 auto;background: gray;display: flex;align-items: center;}
+    .box1 div{width:100px;height: 60px;line-height: 50px;background-color: teal;}
+    .box1 div:nth-of-type(2){background-color:yellow;flex-grow:.2;}
+
+
+    .box2{width: 1000px;height: 60px;margin: 0 auto;background: gray;display: flex;align-items: center;}
+    .box2 div{width:100px;height: 60px;line-height: 50px;background-color: teal;}
+    .box2 div:nth-of-type(2){background-color:yellow;flex-basis: 50px;align-self: flex-end;}
+ 
+</style>
+<body>
+
+    <div class="box2">
+        <div>页面1</div>
+        <div>页面2</div>
+        <div>页面3</div>
+        <div>页面4</div>
+        <div>页面5</div>
+        <div>页面6</div>
+        <div>页面7</div>
+        <div>页面8</div>
+        <div>页面9</div>
+        <div>页面10</div>
+    </div>
+
+
+   <div class="box1">
+       <div>页面1</div>
+       <div>页面2</div>
+       <div>页面3</div>
+       <div>页面4</div>
+       <div>页面5</div>
+       <div>页面6</div>
+       <div>页面7</div>
+       <div>页面8</div>
+       <div>页面9</div>
+       <div>页面10</div>
+   </div>
+    
+</body>
+</html>

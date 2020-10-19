@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    ul{
+        width: 200px;
+    }
+    li{display: none;}
+    ul:hover li{
+      display: block;
+    }
+    li:hover{
+        background-color: azure;
+    }
+</style>
+<body>
+    <div style="width: 100%;height: 800px;background-color: salmon;position: relative;">
+        <div style="width: 20px;height: 20px;background: yellow;position: relative;"></div>
+        
+        <div style="width: 20px;height: 20px;background: yellow;position: relative;top: 100px;left: 100px;"></div>
+        <div style="width: 20px;height: 20px;background: red;position: absolute;top: 10px;left:10px;"></div>
+
+        <div style="width: 200px;height: 200px;border-radius: 200px;background: black;position: absolute;left: 50%;top: 50%;margin-top: -100px;margin-left: -100px;"></div>
+
+    </div>
+
+    <ul>
+        卖家中心
+        <li>列表项1</li>
+        <li>列表项2</li>
+        <li>列表项3</li>
+        <li>列表项4</li>
+        <li>列表项5</li>
+    </ul>
+</body>
+</html>
