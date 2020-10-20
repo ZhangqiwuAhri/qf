@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <style>
+        div[class^=col] {
+            border: 1px solid #cccccc;
+            text-align: center;
+        }
+        .row{margin-top: 50px;}
+        .rowa{height: 100px;background: chocolate;}
+    </style>
+</head>
+
+<body>
+  <div class="container">
+      <div class="row rowa align-items-center">
+          <div class="col align-self-start">1</div>
+          <div class="col">2</div>
+          <div class="col align-self-end">3</div>
+      </div>
+  </div> 
+
+
+  <div class="container">
+    <div class="row rowa justify-content-center">
+        <div class="col-2">1</div>
+        <div class="col-2">2</div>
+    </div>
+  
+    <div class="row rowa justify-content-between">
+        <div class="col-2">1</div>
+        <div class="col-2">2</div>
+    </div>
+
+    
+    <div class="row rowa justify-content-around">
+        <div class="col-2 order-12 offset-2">1</div>
+        <div class="col-2 order-1">2</div>
+    </div>
+
+    
+</div> 
+
+
+</body>
+
+</html>
