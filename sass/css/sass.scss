@@ -1,0 +1,82 @@
+.box{width: 200px;}
+
+/*
+ 多行注释才能被编译
+*/
+$number : 123px;
+$i      :3;
+$magrgin: margin;
+
+@function sum($a,$b){
+    @return $a+$b;
+}
+
+.zqw{
+    display: inline;
+  }
+  .box7{
+    @extend .zqw;
+  }
+
+.box5{
+    width: round(3.4px);
+    height: sum(50px,20px);
+    
+}
+
+.box4{
+    width: 20px*0.5;
+    height: 20px/2;
+    padding: (20px/2);
+}
+
+.box3{
+    width: $number/$i;
+}
+
+.box2{
+    width: $number+$i;
+}
+
+
+@mixin show {
+    display: block;
+}
+.box1{
+    width: $number*3;
+    @include show();
+   
+}
+
+.box{
+    width: $number;
+}
+
+.box#{$i}{
+  
+    #{$magrgin}:auto;
+    $number :456px;
+    width: $number;
+}
+.box2{
+    width: $number;
+}
+ul{
+    list-style: none;
+    li{
+        color: yellow;
+        a{text-decoration: none;}
+    }
+    :hover{
+        color: red;
+    }
+    &:hover{
+        color: red;
+        font:{
+            size: 20px;
+            weight:bold;
+            family:宋体
+        }
+    }
+   
+}
