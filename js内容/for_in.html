@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+var x = [1,2,3,4,5];
+    var new_1 = x.every(function(value,key){
+            return value >3;
+    })
+
+    console.log(new_1);
+
+
+    var x = [1,2,3,4,5];
+    var new_1 = x.some(function(value,key){
+            return value >3;
+    })
+
+    console.log(new_1);
+
+
+    var x = [1,2,3,4,5];
+    var new_1 = x.filter(function(value,key){
+            return value >3;
+    })
+
+    console.log(new_1);
+
+
+
+    var x = [1,2,3,4,5];
+    x.forEach(function(value,key){
+        console.log(key+"=>"+value);
+      
+    });
+
+
+
+
+    var x_new =x.map(function(value,key){
+        return value+1;
+    })
+    
+    console.log(x);
+    console.log(x_new);
+
+
+
+
+   
+  
+   
+    var x = [1,2,3,4,5];
+    console.log(x);
+    for(a in x){
+        console.log(x[a]);
+    }
+    console.log(x.indexOf(111,11));
+    var arr = [];
+    var a1= arr.push(1);
+    var a2 = arr.pop();
+    console.log(a1);
+    console.log(a2);
+    console.log(arr);
+    
+</script>
+    
+</body>
+</html>
