@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 500px;
+            height: 400px;
+            border: 1px solid #ccc;
+            padding-top: 100px;
+            perspective: 500px;
+        }
+
+        .list {}
+
+        .nav {
+            width: 200px;
+            height: 50px;
+            background: red;
+            text-align: center;
+            line-height: 50px;
+            border: 1px solid gold;
+            transition: 5s;
+            transform: rotateX(-180deg);
+            transform-origin: center 0;
+          
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn">菜单</button>
+
+    <div class="box">
+        <div class="list">
+            <div class="nav">
+                1
+                <div class="nav">
+                    2
+                    <div class="nav">
+                        3
+                        <div class="nav">
+                            4
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+</body>
+
+<script>
+    var btn = document.getElementById("btn");
+    console.log(btn);
+ 
+    var nav = document.getElementsByClassName("nav");
+
+    btn.onclick = function(){
+       
+        
+        for(var i = 0 ; i < nav.length; i ++){
+            console.log( nav[i])
+            nav[i].style.transition = "1s" + (i*150) + "ms";
+            nav[i].style.transform= " rotateX(deg)";
+        
+          
+           
+        }
+    }
+    
+</script>
+
+</html>

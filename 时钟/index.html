@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 300px;height: 300px;border: 10px solid #000;
+            border-radius: 50%;
+            margin:0 auto;margin-top: 200px;
+            position: relative;
+        }
+        ul{list-style: none; }
+        ul>li{position: absolute;width: 5px;height: 10px;background-color: #000;left:50%;top: 0;transform-origin: center 150px}
+        /* ul>li:nth-of-type(2){position: absolute;width: 5px;height: 20px;background-color:red;left: 50%;top: -20px;transform: rotate(6deg);transform-origin: center 150px;} */
+        .hours{width: 6px;height: 60px;background: #000;position: absolute;top: 50%;left: 50%;transform: rotate(0deg);transform-origin: center 0;}
+        .min{width: 6px;height: 80px;background: #000;position: absolute;top: 50%;left: 50%; transform: rotate(0deg);transform-origin: center 0;}
+        .second{width: 6px;height: 120px;background: #000;position: absolute;top: 50%;left: 50%;}
+        .point{width: 30px;height:30px;background: black;position: absolute;top: 45%;left: 45%;border-radius: 50%;}
+    </style>
+    
+</head>
+<body>
+    <div class="box">
+         <ul id="block">
+         </ul>
+
+         <div class="hours" id="hours"></div>
+         <div class="min" id="min"></div>
+         <div class="second" id="second"></div>
+         <div class="point"></div>
+    </div>
+    
+</body>
+
+<script>
+  var ul = document.getElementById("block");
+  for(var i = 0 ; i < 60 ; i ++ ){
+      var li = document.createElement("li");
+      li.style.transform = "rotate("+i*6+"deg)";
+      if(i%5==0){
+        li.style.height = "25px"; 
+      }
+      ul.append(li);
+  }
+  
+  var hours = document.getElementById("hours");
+  var min = document.getElementById("min");
+  var second = document.getElementById("second");
+  setInterval(() => {
+    var date = new Date();
+    var h    = date.getHours();
+    var m    = date.getMinutes();
+    var s    = date.getSeconds();
+    
+    var s_deg = s*6+180;
+    var m_deg = m*6+180;
+    var h_deg = h*30+180;
+   
+    second.style.transform = "rotate("+s_deg+"deg)";
+    second.style.transformOrigin="center 0";
+
+    min.style.transform = "rotate("+m_deg+"deg)";
+    min.style.transformOrigin="center 0";
+
+    hours.style.transform = "rotate("+h_deg+"deg)";
+    hours.style.transformOrigin="center 0";
+    
+
+   
+  }, 1000);
+ 
+
+
+</script>
+</html>

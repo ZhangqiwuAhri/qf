@@ -40,10 +40,42 @@
             clip-path: polygon(0 0,100px 0,0 100px);
             shape-outside: polygon(0 0,100px 0,0 100px);
         }
+        body{
+            height: 2000px;
+        }
+        html::-webkit-scrollbar{
+            width: 10px;
+           
+           
+        }
+        html::-webkit-scrollbar-thumb{
+            background: red;
+            border-radius: 10px;
+        }
+
+
+        html::-webkit-scrollbar-track{
+            background: palegreen;
+        }
+        .box5{width: 600px;height: 300px;border: 1px solid #ccc;overflow: auto;scroll-snap-type: x mandatory;}
+        ul{list-style: none;width: 4000px;}
+        ul>li{width: 500px;height: 60px;text-align: center;float: left;margin-left: 100px;background: red;scroll-snap-align: start;}
 
     </style>
 </head>
 <body>
+<div class="box5">
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+</div>
+ 
+
+    
     <div class="box2">
         <div class="box4"></div>
         23. Perhaps this is the source of the error below.
