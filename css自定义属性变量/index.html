@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --color:red;
+            --number:100px;
+            --number2:100;
+        }
+
+        .box{
+            width: var(--number,100px);
+            height: calc(var(--number2)*1px);
+            background: var(--color);
+        }
+        .box2{
+            width: 400px;
+            height: 400px;
+            border: 1px solid #ccc;
+       
+        }
+        .box3{
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            border-radius: 100px;
+            float: left;
+            shape-outside:padding-box;
+            
+        }
+        .box4{
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            background: palegoldenrod;;
+            float: left;
+            clip-path: polygon(0 0,100px 0,0 100px);
+            shape-outside: polygon(0 0,100px 0,0 100px);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box2">
+        <div class="box4"></div>
+        23. Perhaps this is the source of the error below.
+Error: No configuration provided for H:\code\web\qf\css\src\postcss.css
+    at module.exports (H:\code\web\qf\node_modules\stylelint\lib\utils\configurationError.js:8:28))
+    at H:\code\web\qf\node_modules\stylelint\lib\getConfigForFile.js:46:15
+    at async LazyResult.runAsync (H:\NodeJs\node_modules\postcss\lib\lazy-result.js:331:11)      
+    at async Promise.all (index 0) {
+  code: 78
+    </div>
+    
+
+    <div class="box2">
+            <div class="box3">
+               aaa
+            </div>
+            Perhaps this is the source of the error below.
+            Error: No configuration provided for H:\code\web\qf\css\src\postcss.css
+                at module.exports (H:\code\web\qf\node_modules\stylelint\lib\utils\configurationError.js:8:28))
+                at H:\code\web\qf\node_modules\stylelint\lib\getConfigForFile.js:46:15
+                at async LazyResult.runAsync (H:\NodeJs\node_modules\postcss\lib\lazy-result.js:331:11)      
+                at async Promise.all (index 0) {
+              code: 78
+    </div>
+
+
+   <div class="box">
+
+   </div>
+    
+
+</body>
+</html>
